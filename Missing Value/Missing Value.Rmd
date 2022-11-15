@@ -197,14 +197,14 @@ grade_result(
 
 ### Exercise 2
 
-How would you impute the the missing values with their median?
+How would you impute the missing values with their median?
 
 ```{r exercise2, exercise=TRUE}
 ```
 
 ```{r exercise2-solution}
-airquality$Ozone[is.na(airquality$Ozone)] = median(airquality$Ozone,na.rm = TRUE)
-airquality$Solar.R[is.na(airquality$Solar.R)] = median(airquality$Solar.R, na.rm = TRUE)
+airquality$Ozone[is.na(airquality$Ozone)] <- median(airquality$Ozone,na.rm = TRUE)
+airquality$Solar.R[is.na(airquality$Solar.R)] <- median(airquality$Solar.R, na.rm = TRUE)
 ```
 
 ```{r exercise2-check}

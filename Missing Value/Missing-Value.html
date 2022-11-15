@@ -320,7 +320,7 @@ data-lines="0">
 </div>
 <div id="section-exercise-2" class="section level3">
 <h3>Exercise 2</h3>
-<p>How would you impute the the missing values with their median?</p>
+<p>How would you impute the missing values with their median?</p>
 <div class="tutorial-exercise" data-label="exercise2"
 data-completion="1" data-diagnostics="1" data-startover="1"
 data-lines="0">
@@ -329,8 +329,8 @@ data-lines="0">
 <div class="tutorial-exercise-support" data-label="exercise2-solution"
 data-completion="1" data-diagnostics="1" data-startover="1"
 data-lines="0">
-<pre class="text"><code>airquality$Ozone[is.na(airquality$Ozone)] = median(airquality$Ozone,na.rm = TRUE)
-airquality$Solar.R[is.na(airquality$Solar.R)] = median(airquality$Solar.R, na.rm = TRUE)</code></pre>
+<pre class="text"><code>airquality$Ozone[is.na(airquality$Ozone)] &lt;- median(airquality$Ozone,na.rm = TRUE)
+airquality$Solar.R[is.na(airquality$Solar.R)] &lt;- median(airquality$Solar.R, na.rm = TRUE)</code></pre>
 </div>
 </div>
 <div id="section-exercise-3" class="section level3">
@@ -445,8 +445,8 @@ learnr:::store_exercise_cache(structure(list(label = "exercise2", global_setup =
     list(label = "exercise2", code = "\n\n", opts = list(label = "\"exercise2\"", 
         exercise = "TRUE"), engine = "r")), code_check = NULL, 
     error_check = NULL, check = structure("grade_code(\"Excellent\")", chunk_opts = list(
-        label = "exercise2-check")), solution = structure(c("airquality$Ozone[is.na(airquality$Ozone)] = median(airquality$Ozone,na.rm = TRUE)", 
-    "airquality$Solar.R[is.na(airquality$Solar.R)] = median(airquality$Solar.R, na.rm = TRUE)"
+        label = "exercise2-check")), solution = structure(c("airquality$Ozone[is.na(airquality$Ozone)] <- median(airquality$Ozone,na.rm = TRUE)", 
+    "airquality$Solar.R[is.na(airquality$Solar.R)] <- median(airquality$Solar.R, na.rm = TRUE)"
     ), chunk_opts = list(label = "exercise2-solution")), tests = NULL, 
     options = list(eval = FALSE, echo = TRUE, results = "markup", 
         tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
