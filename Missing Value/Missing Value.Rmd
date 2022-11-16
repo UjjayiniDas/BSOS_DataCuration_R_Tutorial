@@ -72,7 +72,7 @@ To identify the location or the number of `NA`-s we can leverage the `which()` a
 which(is.na(x))
 
 
-# identify count of NAs in data frame
+# count NAs in data frame
 sum(is.na(df))
 ```
 
@@ -97,7 +97,7 @@ x
 
 x[is.na(x)] <- mean(x, na.rm = TRUE)
 
-# rounding the values in x upto 2 decimal places
+# round the values in x to 2 decimal places
 
 round(x,2)
 
@@ -143,7 +143,7 @@ mean_nonNA <- mean(x, na.rm = TRUE)
 mean_nonNA
 ```
 
-You may also desire to subset our data to obtain complete observations, those observations (rows) in the data that contain no missing data.You can do this in a few different ways. Considering our previous data frame `df2` here.
+You may also desire to subset our data to obtain complete observations, those observations (rows) in the data that contain no missing data across all columns. You can do this in a few different ways. Consider our previous data frame `df2` here.
 
 First, to find complete cases (rows with no missing values) we can leverage the `complete.cases()` function which returns a logical vector identifying rows which are complete cases.
 
@@ -152,7 +152,7 @@ df2
 complete.cases(df2)
 ```
 
-So, looking back at the data frame we made, `df2` you can see that rows 1 and 3 are complete cases. We can use this information to subset our data frame which will return the rows which `complete.cases()` found to be TRUE.
+So, looking back at the data frame we made, `df2`, you can see that rows 1 and 3 are complete cases. We can use this information to subset our data frame which will return the rows which `complete.cases()` found to be TRUE.
 
 ```{r echo=TRUE}
 # subset with complete.cases to get complete cases
